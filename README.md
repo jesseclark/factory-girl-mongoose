@@ -8,5 +8,8 @@ A [Mongoose](http://http://mongoosejs.com/) adapter for [factory-girl](https://g
 ## Usage
 
 ```javascript
-require('factory-girl-mongoose')();
+var FactoryGirl = require('factory-girl');
+var Factory = new FactoryGirl.Factory();
+var MongooseAdapter = require('factory-girl-mongoose').MongooseAdapter;
+Factory.setAdapter(MongooseAdapter);
 ```
