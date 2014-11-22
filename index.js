@@ -1,7 +1,5 @@
-var Factory = require("factory-girl");
-var Adapter = Factory.Adapter;
 
-var MongooseAdapter = function(){};
+var MongooseAdapter = function () {};
 
 MongooseAdapter.prototype.build = function(Model, attributes) {
   return new Model(attributes);
@@ -16,9 +14,7 @@ MongooseAdapter.prototype.set = function(props, doc, Model) {
 };
 
 MongooseAdapter.prototype.save = function(doc, Model, callback) {
-
   doc.save(function (err) {
-
     if (err) {
       return callback(err);
     }
